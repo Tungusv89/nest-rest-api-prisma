@@ -57,27 +57,29 @@ npm run start:dev
 
 См. `.env.example` для полного списка. Основные:
 
-| Переменная | Описание |
-|---|---|
-| `DATABASE_URL` | Строка подключения к PostgreSQL |
-| `JWT_SECRET` | Секретный ключ для подписи JWT-токенов |
+| Переменная     | Описание                               |
+| -------------- | -------------------------------------- |
+| `DATABASE_URL` | Строка подключения к PostgreSQL        |
+| `JWT_SECRET`   | Секретный ключ для подписи JWT-токенов |
 
 ## API Endpoints
 
 ### Auth
-| Метод | Путь | Описание |
-|---|---|---|
-| POST | `/users/register` | Регистрация нового пользователя |
-| POST | `/auth/login` | Логин, возвращает `access_token` |
+
+| Метод | Путь              | Описание                         |
+| ----- | ----------------- | -------------------------------- |
+| POST  | `/users/register` | Регистрация нового пользователя  |
+| POST  | `/auth/login`     | Логин, возвращает `access_token` |
 
 ### Tasks (требуют заголовок `Authorization: Bearer <token>`)
-| Метод | Путь | Описание |
-|---|---|---|
-| GET | `/tasks` | Список задач текущего пользователя |
-| GET | `/tasks/:id` | Получить одну задачу |
-| POST | `/tasks` | Создать задачу |
-| PATCH | `/tasks/:id` | Обновить задачу |
-| DELETE | `/tasks/:id` | Удалить задачу |
+
+| Метод  | Путь         | Описание                           |
+| ------ | ------------ | ---------------------------------- |
+| GET    | `/tasks`     | Список задач текущего пользователя |
+| GET    | `/tasks/:id` | Получить одну задачу               |
+| POST   | `/tasks`     | Создать задачу                     |
+| PATCH  | `/tasks/:id` | Обновить задачу                    |
+| DELETE | `/tasks/:id` | Удалить задачу                     |
 
 ## Тестирование
 
@@ -91,4 +93,4 @@ npm run test
 
 ## Автор
 
-<Евгений Куликов> — [LinkedIn](https://www.linkedin.com/in/john-kulikov-207227b3/) · [GitHub](https://github.com/Tungusv89)
+<Евгений Куликов> — [LinkedIn](https://www.linkedin.com/in/john-kulikov-207227b3/) · [GitHub](https://github.com/Tungusv89) · [Telegram](https://t.me/coolikov_john)
