@@ -89,7 +89,7 @@ npm run test
 
 ## Демо
 
-Живая версия: `<ссылка после деплоя>`
+Живая документация API (Swagger): https://nest-rest-api-prisma-production.up.railway.app/api-docs
 
 ## Автор
 
