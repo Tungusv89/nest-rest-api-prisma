@@ -32,8 +32,8 @@ REST API для управления задачами с авторизацие�
 ### Через Docker (рекомендуется)
 
 ```bash
-git clone <https://github.com/Tungusv89/nest-rest-api-prisma/>
-cd nest-rest-api
+git clone https://github.com/Tungusv89/nest-rest-api-prisma.git
+cd nest-rest-api-prisma
 cp .env.example .env
 docker-compose up
 ```
@@ -93,4 +93,4 @@ npm run test
 
 ## Автор
 
-<Евгений Куликов> — [LinkedIn](https://www.linkedin.com/in/john-kulikov-207227b3/) · [GitHub](https://github.com/Tungusv89) · [Telegram](https://t.me/coolikov_john)
+Евгений Куликов — [LinkedIn](https://www.linkedin.com/in/john-kulikov-207227b3/) · [GitHub](https://github.com/Tungusv89) · [Telegram](https://t.me/coolikov_john)
