@@ -32,7 +32,7 @@ REST API для управления задачами с авторизацие�
 ### Через Docker (рекомендуется)
 
 ```bash
-git clone <ссылка-на-репозиторий>
+git clone <https://github.com/Tungusv89/nest-rest-api-prisma/>
 cd nest-rest-api
 cp .env.example .env
 docker-compose up
