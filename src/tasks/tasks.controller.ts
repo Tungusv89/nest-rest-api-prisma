@@ -9,6 +9,7 @@ import {
   Body,
   UseGuards,
   Request,
+  Query,
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { CreateTaskDto } from './dto/create-task.dto';
@@ -17,11 +18,19 @@ import {
   CurrentUser,
   CurrentUserPayload,
 } from 'src/auth/decorators/current-user.decorator';
+import { SyncQueryDto } from './dto/sync-query.dto';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
+@ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
 @Controller('tasks')
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
+
+  @Get('sync')
+  sync(@Query() query: SyncQueryDto, @CurrentUser() user: CurrentUserPayload) {
+    return this.tasksService.findChangedSince(user.userId, query.since);
+  }
 
   @Get()
   findAll(@CurrentUser() user: CurrentUserPayload) {

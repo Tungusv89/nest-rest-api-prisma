@@ -1,14 +1,17 @@
 import { Controller, Post, UseGuards, Request } from '@nestjs/common';
+import { ApiBody } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { LocalAuthGuard } from './guards/local-auth.guard';
+import { LoginDto } from './dto/login.dto';
 
 @Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
 
-  @UseGuards(LocalAuthGuard) // сначала отработает LocalStrategy, проверит email+пароль
+  @UseGuards(LocalAuthGuard)
+  @ApiBody({ type: LoginDto })
   @Post('login')
   login(@Request() req) {
-    return this.authService.login(req.user); // req.user уже заполнен guard'ом
+    return this.authService.login(req.user);
   }
 }
